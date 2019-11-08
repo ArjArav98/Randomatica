@@ -1,9 +1,15 @@
 # Randomatica
-A repository of random mini-projects and programs in different languages that I had nowhere else to put. These could be concepts that I thought of coding and which weren't large enough to merit creating a repository just for themselves.
+I guess I have a strange aversion to creating brand new repositories for small projects. Seems like a waste of a repository....I don't know. Anyways, these are libraries for personal projects which are either too small for having a repository of their own or are just plain silly.
 
-### JavaScript
-#### JSON Serialiser and Deserialiser
-A collection of functions which help to convert a JSON document into a Javascript object and the reverse. Coded from scratch in Javascript. Yeah, I know it's already there as a library function but it's fun to DIY.
+I'm writing the projects as libraries so that anyone can use them in their own projects. And yes, no packages or pre-defined libraries shall be used here! 
 
-#### Othello/Reversi
-A implementation of the Othello/Reversi game in Node.js.
+The libraries are categorised according to domain.
+
+### Cryptography
+
+#### Ciphers (Golang)
+These are a collection of simple symmetric ciphers implemented in Golang.  Click here for the README to see how to use them!
+
+## Future Ideas
+* JSON Serialiser and Deserialiser from Scratch
+* Othello/Reversi Simulation
