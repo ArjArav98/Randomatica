@@ -7,8 +7,11 @@ The libraries are categorised according to domain.
 
 ### Cryptography
 
-#### Ciphers (Golang)
-These are a collection of simple symmetric ciphers implemented in Golang.  Click here for the README to see how to use them!
+#### Cryptonite (C)
+This is a library which lets users implement various symmetric and asymmetric cryptosystems to encode text. It also includes other functions which do other important tasks such as key generation (for both private-key and public-key cryptography).
+
+	* Key Generation (Symmetric/Private-Key Cryptography)
+	* Key Generation (Asymmetric/Public-Key Cryptography)
 
 ## Future Ideas
 * JSON Serialiser and Deserialiser from Scratch
