@@ -5,10 +5,8 @@ I'm writing the projects as libraries so that anyone can use them in their own p
 
 ### Cryptography
 
-#### Cryptonite (C)
-This is a library which lets users implement various symmetric and asymmetric cryptosystems to encode text. It also includes other functions which do other important tasks such as key generation (for both private-key and public-key cryptography).
-* Key Generation (Symmetric/Private-Key Cryptography)
-* Key Generation (Asymmetric/Public-Key Cryptography)
+#### Cryptonite (Golang and C)
+Cryptonite is a package written in Golang (and a bit in C) which lets users to encrypt and decrypt text using symmetric and assymetric forms of encryption and decryption. The package also allows users to generate keys (both for symmetric and assymetric cryptography).
 
 ## Future Ideas
 * JSON Serialiser and Deserialiser from Scratch
