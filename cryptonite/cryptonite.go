@@ -14,7 +14,7 @@ func SymmetricKey(bits int) string {
 	var key strings.Builder
 	rand.Seed(int64(time.Now().Nanosecond()))
 
-	for i:=0; i<bits; i++ {
+	for iter:=0; iter<bits; iter++ {
 
 		chartype := rand.Int() % 3
 		switch(chartype) {
@@ -35,12 +35,48 @@ func SymmetricKey(bits int) string {
 
 }
 
-func main() {
+// Takes in the string and key and encrypts
+// using a simple cesar cipher.
+func CaesarEncrypt(text string, key string) string {
 
-	var bits int
-	fmt.Scanf("%d", &bits)
+	keylen := len(key)
+	textlen := len(text)
 
-	key := SymmetricKey(bits)
-	fmt.Printf("%s\n", key);
+	var value byte
+	var ciphertext strings.Builder
+
+	switch(keylen>26) {
+		case true: value = key[keylen%26]
+		case false: value = key[26%keylen]
+	}
+
+	for iter:=0; iter<textlen; iter++ {
+		ciphertext.WriteByte(text[iter]+value)
+	}
+
+	return ciphertext.String()
+
+}
+
+// Takes in the ciphertext and key and decrypts
+// the caesar ciphertext.
+func CaesarDecrypt(ciphertext string, key string) string {
+
+	keylen := len(key)
+	cipherlen := len(ciphertext)
+
+	var value byte
+	var text strings.Builder
+
+	switch(keylen>26) {
+		case true: value = key[keylen%26]
+		case false: value = key[26%keylen]
+	}
+
+	for iter:=0; iter<cipherlen; iter++ {
+		text.WriteByte(ciphertext[iter]-value)
+	}
+
+	return text.String()
 
 }
