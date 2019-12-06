@@ -7,6 +7,10 @@ import (
 	"strings"
 )
 
+/******************/
+/* KEY GENERATION */
+/******************/
+
 // Generates a private key for 
 // symmetric-key cryptography.
 func SymmetricKey(bits int) string {
@@ -35,9 +39,57 @@ func SymmetricKey(bits int) string {
 
 }
 
-// Takes in the string and key and encrypts
-// using a simple cesar cipher.
+/*********************/
+/* SYMMETRIC CIPHERS */
+/*********************/
+
+// Takes in the plaintext and key
+// and encrypts using caesar cipher.
 func CaesarEncrypt(text string, key string) string {
+
+	textlen := len(text)
+	keylen := len(key)
+
+	var ciphertext strings.Builder
+
+	if keylen==1 {
+		for iter:=0; iter<textlen; iter++ {
+			ciphertext.WriteByte(byte(text[iter] + key[0]))
+		}
+	} else {
+		for iter:=0; iter<textlen; iter++ {
+			ciphertext.WriteByte(byte(text[iter] + byte(keylen)))
+		}
+	}
+
+	return ciphertext.String()
+}
+
+// Takes in ciphertext and key and
+// decrypts using caesar cipher.
+func CaesarDecrypt(ciphertext string, key string) string {
+
+	ciphertextlen := len(ciphertext)
+	keylen := len(key)
+
+	var text strings.Builder
+
+	if keylen==1 {
+		for iter:=0; iter<ciphertextlen; iter++ {
+			text.WriteByte(byte(ciphertext[iter] - key[0]))
+		}
+	} else {
+		for iter:=0; iter<ciphertextlen; iter++ {
+			text.WriteByte(byte(ciphertext[iter] - byte(keylen)))
+		}
+	}
+
+	return text.String()
+}
+
+// Takes in the string and key and encrypts
+// using a simple vignere cipher.
+func VignereEncrypt(text string, key string) string {
 
 	keylen := len(key)
 	textlen := len(text)
@@ -59,8 +111,8 @@ func CaesarEncrypt(text string, key string) string {
 }
 
 // Takes in the ciphertext and key and decrypts
-// the caesar ciphertext.
-func CaesarDecrypt(ciphertext string, key string) string {
+// the vignere ciphertext.
+func VignereDecrypt(ciphertext string, key string) string {
 
 	keylen := len(key)
 	cipherlen := len(ciphertext)
