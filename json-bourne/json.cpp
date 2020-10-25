@@ -46,6 +46,7 @@ class JsonValidator {
 		dfa.push_back({
 			.id=4,
 			.neighbours = {
+				{ .id=6, .conditions = { make_pair('=','"')  } },
 				{ .id=5, .conditions = { make_pair('^','^')  } }
 			}
 		}); // Key start quote.
@@ -64,7 +65,7 @@ class JsonValidator {
 				{ .id=6, .conditions = { make_pair('=',' ') } },
 				{ .id=2, .conditions = { make_pair('^','.') } }
 			}
-		}); // End quote.
+		}); // Key end quote.
 
 		dfa.push_back({
 			.id=7,
@@ -78,6 +79,7 @@ class JsonValidator {
 		dfa.push_back({
 			.id=8,
 			.neighbours = {
+				{ .id=10, .conditions = { make_pair('=','"') } },	
 				{ .id=9, .conditions = { make_pair('^','^') } }
 			}
 		}); // Value start quote.
@@ -92,22 +94,34 @@ class JsonValidator {
 		dfa.push_back({
 			.id=10,
 			.neighbours = {
-				{ .id=11, .conditions = { make_pair('=','}') } },
+				{ .id=12, .conditions = { make_pair('=','}') } },
 				{ .id=10, .conditions = { make_pair('=',' ') } },
+				{ .id=11, .conditions = { make_pair('=',',') } },
 				{ .id=2,  .conditions = { make_pair('^','.') } }
 			}
-		}); // End start quote.
+		}); // Value end quote.
 
 		dfa.push_back({
 			.id=11,
 			.neighbours = {
-				{ .id=11, .conditions = { make_pair('=',' ') } }
+				{ .id=12, .conditions = { make_pair('=','}') } },
+				{ .id=11, .conditions = { make_pair('=',' ') } },
+				{ .id=4,  .conditions = { make_pair('=','"') } },
+				{ .id=2,  .conditions = { make_pair('^','.') } }
+			}
+		}); // Comma.	
+
+		dfa.push_back({
+			.id=12,
+			.neighbours = {
+				{ .id=12, .conditions = { make_pair('=','}') } },
+				{ .id=12, .conditions = { make_pair('=',' ') } }
 			}
 		}); // Closing brace.
 
 		this->word = word;
 		this->startNodeId = 1;
-		this->endNodeId = 11;
+		this->endNodeId = 12;
 	}
 
 	int findNode(int nodeId) {
@@ -161,7 +175,7 @@ class JsonValidator {
 };
 
 int main() {
-	JsonValidator json("{\"hello\"        : \"hello\"}");
+	JsonValidator json("{ \" \" : \" \", \"\":\"\"}  }");
 	cout<<json.isValid()<<endl;
 	return 0;
 }
