@@ -26,14 +26,16 @@ class JsonValidator {
 		dfa.push_back({
 			.id=1,
 			.neighbours = {
-				{ .id=3, .conditions = { make_pair('=','{') } },
-				{ .id=1, .conditions = { make_pair('=',' ') } },
-				{ .id=2, .conditions = { make_pair('^','.') } }
+				{ .id=3,  .conditions = { make_pair('=','{') } },
+				{ .id=1,  .conditions = { make_pair('=',' ') } },
+				{ .id=13, .conditions = { make_pair('=','[') } },
+				{ .id=2,  .conditions = { make_pair('^','.') } }
 			}
 		}); // Start node
 
 		dfa.push_back({ .id=2, .neighbours = {} }); // Else node
 
+		/* We start the DFA for the dictionary object.*/
 		dfa.push_back({
 			.id=3,
 			.neighbours = {
@@ -118,6 +120,24 @@ class JsonValidator {
 				{ .id=12, .conditions = { make_pair('=',' ') } }
 			}
 		}); // Closing brace.
+
+		/* We continue the DFA for the array object. */
+		dfa.push_back({
+			.id=13,
+			.neighbours = {
+				{ .id=14, .conditions = { make_pair('=','"') } },
+				{ .id=13, .conditions = { make_pair('=',' ') } },
+				{ .id=2,  .conditions = { make_pair('^','.') } }
+			}
+		}); // Opening square bracket.
+
+		dfa.push_back({
+			.id=14,
+			.neighbours = {
+				{ .id=15, .conditions = { make_pair('=','"') } },
+				{ .id=2,  .conditions = { make_pair('^','.') } }
+			}
+		}); // Opening array string quote.
 
 		this->word = word;
 		this->startNodeId = 1;
