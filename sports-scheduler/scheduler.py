@@ -50,8 +50,15 @@ Round = List[Match]
 #testPlayers = [Player(1,"1"), Player(2,"2"), Player(3,"3"), Player(4,"4"), Player(5,"5"), Player(6,"6"), Player(7,"7"), Player(8,"8"), Player(9,"9"), Player(10,"10")]
 #testConstraints1 = Constraints(concurrent_matches=1, teams_per_match=2, players_per_team=1, available_mins=30, mins_per_match=10)
 
-cyraacsCons = Constraints(concurrent_matches=2, teams_per_match=2, players_per_team=2, available_mins=180, mins_per_match=18)
-cyraacsPlayers = [Player("Divya_G"), Player("Priya_Ranganathan"), Player("Meghana"), Player("Tejas"), Player("Ashutosh"), Player("Pratham"), Player("Shaswat"), Player("Harshith"), Player("Subham"), Player("Abilash"), Player("Himani"), Player("Harith_CB"), Player("Adarsh"), Player("Manoj"), Player("Anil"), Player("Kalyani"), Player("Murari_Shanker"), Player("Venkatavaradan"), Player("Nikhil"), Player("Devisetty"), Player("Sunilvarma"), Player("Nishant"), Player("Deepti"), Player("Venkat"), Player("Bharat")]
+_constraints = Constraints(concurrent_matches=2, teams_per_match=2, players_per_team=2, available_mins=180, mins_per_match=18)
+_players = [
+    Player("Shah_Rukh_Khan"),
+    Player("Salman_Khan"),
+	Player("Deepika_Padukone"),
+	Player("Aishwarya_Rai"),
+	Player("Rajinikanth"),
+	Player("Kamal_Hasan")
+]
 
 #----------------
 # UTILITY CLASSES
