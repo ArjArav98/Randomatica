@@ -46,18 +46,14 @@ Team = List[Player]
 Match = List[Team]
 Round = List[Match]
 
-#testConstraints = Constraints(concurrent_matches=2, teams_per_match=2, players_per_team=2, available_mins=30, mins_per_match=10)
-#testPlayers = [Player(1,"1"), Player(2,"2"), Player(3,"3"), Player(4,"4"), Player(5,"5"), Player(6,"6"), Player(7,"7"), Player(8,"8"), Player(9,"9"), Player(10,"10")]
-#testConstraints1 = Constraints(concurrent_matches=1, teams_per_match=2, players_per_team=1, available_mins=30, mins_per_match=10)
-
 _constraints = Constraints(concurrent_matches=2, teams_per_match=2, players_per_team=2, available_mins=180, mins_per_match=18)
 _players = [
     Player("Shah_Rukh_Khan"),
     Player("Salman_Khan"),
-	Player("Deepika_Padukone"),
-	Player("Aishwarya_Rai"),
-	Player("Rajinikanth"),
-	Player("Kamal_Hasan")
+    Player("Deepika_Padukone"),
+    Player("Aishwarya_Rai"),
+    Player("Rajinikanth"),
+    Player("Kamal_Hasan")
 ]
 
 #----------------
