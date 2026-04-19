@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chennai Metro Map</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #F2F0EF; /* Off-White */
+        }
+
+        body svg {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 1400 1400" height="1300" width="1300" fill="white">
+        <style>
+            .text {
+                font: bold 16px sans-serif;
+                fill: black;
+            }
+        </style>
+
+        <!-- TODO: Review the line direction for Nandnanm to Airport -->
+        <!-- TODO: Should alandur be an interchange? Or any station on the inter-line stretch. -->
+
+        <!-- METRO LINE: GREEN -->
+        <g>
+            <!-- RAIL LINE -->
+            <!-- Alandur to Airport -->
+            <line x1="707" y1="595" x2="707" y2="780" stroke="#4CBB17" stroke-width="7" />
+            
+            <!-- Ekkatuthangal to Ashok Nagar  -->
+            <line x1="490" y1="575" x2="690" y2="575" stroke="#4CBB17" stroke-width="7" />
+            <path d="M 690,575 Q 707,575 707,595" stroke="#4CBB17" stroke-width="7"/>
+            
+            <!-- Ashok Nagar to Thirumangalam -->
+            <line x1="473" y1="120" x2="473" y2="555" stroke="#4CBB17" stroke-width="7"/>
+            <path d="M 473,555 Q 473,575 490,575" stroke="#4CBB17" stroke-width="7"/>
+            <path d="M 473,120 Q 473,100 490,100" stroke="#4CBB17" stroke-width="7"/>
+
+            <!-- Thirumangalam to Central -->
+            <line x1="490" y1="100" x2="700" y2="100" stroke="#4CBB17" stroke-width="7"/>
+
+            <!-- St Thomas Mount Branch -->
+            <line x1="724" y1="655" x2="767" y2="655" stroke="#4CBB17" stroke-width="7" />
+            <path d="M 707,635 Q 707,655 724,655" stroke="#4CBB17" stroke-width="7"/>
+        </g>
+        
+        <!-- METRO LINE: BLUE -->
+        <g>
+            <!-- RAIL LINE -->
+            <line x1="700" y1="100" x2="700" y2="780" stroke="#1F51FF" stroke-width="7" />
+        </g>
+
+        <!-- STATIONS: METRO BLUE -->
+        <g>
+            <circle cx="700" cy="100" r="11" fill="black" />
+            <circle cx="700" cy="100" r="7" fill="white" />
+            <text x="718" y="105" text-anchor="start" class="text">Dr MGR Chennai Central</text>
+            <!--<text x="150" y="94" text-anchor="middle" class="text">Chennai</text>
+            <text x="150" y="110" text-anchor="middle" class="text">Central</text>-->
+
+            <line x1="700" y1="145" x2="715" y2="145" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="150" text-anchor="start" class="text">Government Estate</text>
+
+            <line x1="700" y1="190" x2="715" y2="190" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="195" text-anchor="start" class="text">LIC</text>
+
+            <line x1="700" y1="235" x2="715" y2="235" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="240" text-anchor="start" class="text">Thousand Lights</text>
+
+            <line x1="700" y1="280" x2="715" y2="280" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="285" text-anchor="start" class="text">AG-DMS</text>
+
+            <line x1="700" y1="325" x2="715" y2="325" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="330" text-anchor="start" class="text">Teynampet</text>
+
+            <line x1="700" y1="370" x2="715" y2="370" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="375" text-anchor="start" class="text">Nandanam</text>
+
+            <line x1="700" y1="415" x2="715" y2="415" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="420" text-anchor="start" class="text">Saidapet Metro</text>
+
+            <line x1="700" y1="480" x2="715" y2="480" stroke="#1F51FF" stroke-width="7" />
+            <text x="723" y="485" text-anchor="start" class="text">Little Mount</text>
+
+            <circle cx="700" cy="535" r="11" fill="black" />
+            <circle cx="700" cy="535" r="7" fill="white" />
+            <text x="718" y="540" text-anchor="start" class="text">Guindy</text>
+
+            <circle cx="703" cy="620" r="11" fill="black" />
+            <circle cx="703" cy="620" r="7" fill="white" />
+            <text x="686" y="625" text-anchor="end" class="text">Alandur</text>
+
+            <line x1="685" y1="685" x2="700" y2="685" stroke="#1F51FF" stroke-width="7" />
+            <text x="678" y="690" text-anchor="end" class="text">Nanganallur Road</text>
+
+            <circle cx="703" cy="730" r="11" fill="black" />
+            <circle cx="703" cy="730" r="7" fill="white" />
+            <text x="686" y="735" text-anchor="end" class="text">Meenambakkam Metro</text>
+
+            <circle cx="703" cy="775" r="11" fill="black" />
+            <circle cx="703" cy="775" r="7" fill="white" />
+            <text x="686" y="780" text-anchor="end" class="text">Airport</text>
+        </g>
+
+        <!-- STATIONS: METRO GREEN -->
+        <g>
+            <circle cx="767" cy="655" r="11" fill="black" />
+            <circle cx="767" cy="655" r="7" fill="white" />
+            <!--<text x="767" y="660" text-anchor="start" class="text">St Thomas Mount Metro</text>-->
+        </g>
+    </svg>
+</body>
+</html>
