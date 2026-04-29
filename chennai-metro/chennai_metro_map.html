@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-    <svg viewBox="0 0 1400 1400" height="1300" width="1300" fill="white">
+    <svg viewBox="0 0 1700 1700" height="1300" width="1300" fill="white">
         <style>
             .text {
                 font: bold 16px sans-serif;
@@ -26,43 +26,47 @@
             }
         </style>
 
-        <!-- TODO: Review the line direction for Nandnanm to Airport -->
-        <!-- TODO: Should alandur be an interchange? Or any station on the inter-line stretch. -->
-        <!-- TODO: Review st thomas mount colour of interchange -->
-        
         <g>
             <!-- Chennai Suburban Line Southwest - Chennai Beach to Tirusulam -->
-            <path d="M 950,150
-                    l -261,0
+            <path d="M 1020,600
+                    l -321,0
                     q -10,0 -20,10
-                    l -66,66
+                    l -76,76
                     q -10,10 -10,20
-                    l 0,316
+                    l 0,356
                     q 0,10 -10,20
                     l -222.25,222.25" stroke="#000000" stroke-width="7" fill="none"/>
         </g>
-        
+       
+        <!-- St Thomas Mount should be separated and not joined as an interchange. -->
+        <!-- Some thinking should be done as to where to write the names. -->
+        <!-- TODO: Review st thomas mount colour of interchange -->
+
         <g>
             <!-- Metro Green Line - St Thomas Mount Branch -->
-            <path d="M 487.69,582.2
+            <path d="M 487.69,1082.2
                     q -15.54,15.54 0,31.08
                     l 17.21,17.21
                     q 10.6,10.6 0,21.2
                     l -12.9,13.49" stroke="#4CBB17" stroke-width="7" fill="none" />
             
             <!-- Metro Green Line - Central to Airport -->
-            <path d="M 890,100
-                    l -366.36,0
+            <path d="M 920,560
+                    l -496.36,0
                     q -20,0 -20,20
-                    l 0,441.24
+                    l 0,90
+                    q 0,20 20,20
+                    l 60,0
+                    q 20,0 20,20
+                    l 0,351.24
                     q 0,10 -10,20
                     l -180.39,180.39" stroke="#4CBB17" stroke-width="7" fill="none"/>
             
             <!-- Metro Blue Line - Central to Airport -->
-            <path d="M 890,100
-                    l 0,65
+            <path d="M 920,560
+                    l 0,75
                     q 0,10 -10,20
-                    l -571.7,571.7" stroke="#1F51FF" stroke-width="7" fill="none" />
+                    l -601.7,601.7" stroke="#1F51FF" stroke-width="7" fill="none" />
         </g>
 
         <!-- Document -->
@@ -73,96 +77,106 @@
 
         <!-- STATIONS: METRO GREEN -->
         <g>
-            <path d="M 840,100 l 0,-12
-                    M 795,100 l 0,12
-                    M 750,100 l 0,-12
-                    M 705,100 l 0,12
-                    M 660,100 l 0,-12
-                    M 615,100 l 0,12
-                    M 570,100 l 0,-12
-                    M 525,100 l 0,-12
-                    M 503.64,120 l -12,0
-                    M 503.64,190 l -12,0
-                    M 503.64,260 l -12,0
-                    M 503.64,330 l -12,0
-                    M 503.64,400 l -12,0
-                    M 503.64,500 l -12,0
-                    " stroke="#4CBB17" stroke-width="7" fill="none"/>
+            <path d="M 830,560 l 0,-12
+                    M 775,560 l 0,12
+                    M 720,560 l 0,-12
+                    M 665,560 l 0,12
+                    M 610,560 l 0,-12
+                    M 555,560 l 0,12
+                    M 500,560 l 0,-12
+                    M 445,560 l 0,-12
+                    M 403.64,620 l -12,0
+                    M 453.64,690 l 0,12
+                    M 503.64,760 l -12,0
+                    M 503.64,830 l -12,0
+                    M 503.64,900 l -12,0
+                    M 503.64,1000 l -12,0
+                    " stroke="#4CBB17" stroke-width="7" fill="none" />
         </g>
-
+        
         <!-- STATIONS: METRO BLUE -->
         <g>
-            <circle cx="890" cy="100" r="11" fill="black" />
-            <circle cx="890" cy="100" r="7" fill="white" />
-            <!--<text x="718" y="105" text-anchor="start" class="text">Dr MGR Chennai Central</text>-->
-            <!--<text x="150" y="94" text-anchor="middle" class="text">Chennai</text>
-            <text x="150" y="110" text-anchor="middle" class="text">Central</text>-->
+            <path d="M 885.8,679.2 l 8.5,8.5
+                    M 847,718 l 8.5,8.5
+                    M 808.2,756.8 l 8.5,8.5
+                    M 769.4,795.6 l 8.5,8.5
+                    M 730.6,834.4 l 8.5,8.5
+                    M 691.8,873.2 l 8.5,8.5
+                    M 562.3,1002.7 l -8.5,-8.5
+                    M 445.9,1119.1 l -8.5,-8.5" stroke="#1F51FF" stroke-width="7" fill="none" />
+        </g>
 
-            <line x1="865.8" y1="199.2" x2="876.4" y2="209.8" stroke="#1F51FF" stroke-width="7" />
-            <!--<text x="723" y="150" text-anchor="start" class="text">Government Estate</text>-->
-
-            <line x1="827" y1="238" x2="837.6" y2="248.6" stroke="#1F51FF" stroke-width="7" />
-            <!--<text x="723" y="195" text-anchor="start" class="text">LIC</text>-->
-
-            <line x1="788.2" y1="276.8" x2="798.8" y2="287.4" stroke="#1F51FF" stroke-width="7" />
-            <!--<text x="723" y="240" text-anchor="start" class="text">Thousand Lights</text>-->
-
-            <line x1="749.4" y1="315.6" x2="760" y2="326.2" stroke="#1F51FF" stroke-width="7" />
-            <!--<text x="723" y="285" text-anchor="start" class="text">AG-DMS</text>-->
-
-            <line x1="710.6" y1="354.4" x2="721.2" y2="365" stroke="#1F51FF" stroke-width="7" />
-            <!--<text x="723" y="330" text-anchor="start" class="text">Teynampet</text>-->
-
-            <line x1="671.8" y1="393.2" x2="682.4" y2="403.8" stroke="#1F51FF" stroke-width="7" />
-            <!--<text x="723" y="375" text-anchor="start" class="text">Nandanam</text>-->
-
-            <circle cx="633" cy="432" r="11" fill="black" />
-            <circle cx="633" cy="432" r="7" fill="white" />
+        <!-- INTERCHANGES: METRO BLUE -->
+        <g>
+            <circle cx="920" cy="560" r="11" fill="black" />
+            <circle cx="920" cy="560" r="7" fill="white" />
+            
+            <circle cx="653" cy="912" r="11" fill="black" />
+            <circle cx="653" cy="912" r="7" fill="white" />
             <text x="723" y="420" text-anchor="start" class="text">Saidapet Metro</text>
 
-            <line x1="562.3" y1="502.7" x2="551.7" y2="492.1" stroke="#1F51FF" stroke-width="7" />
-            <text x="723" y="485" text-anchor="start" class="text">Little Mount</text>
-
-            <circle cx="523.5" cy="541.5" r="11" fill="black" />
-            <circle cx="523.5" cy="541.5" r="7" fill="white" />
+            <circle cx="523.5" cy="1041.5" r="11" fill="black" />
+            <circle cx="523.5" cy="1041.5" r="7" fill="white" />
             <text x="718" y="540" text-anchor="start" class="text">Guindy</text>
 
-            <circle cx="487.15" cy="582.75" r="11" fill="black" />
-            <circle cx="487.15" cy="582.75" r="7" fill="white" />
-            <text x="686" y="625" text-anchor="end" class="text">Alandur</text>
+            <circle cx="487.15" cy="1082.75" r="11" fill="black" />
+            <circle cx="487.15" cy="1082.75" r="7" fill="white" />
+            <!--<text x="686" y="625" text-anchor="end" class="text">Alandur</text>-->
 
-            <line x1="445.9" y1="619.1" x2="435.3" y2="608.5" stroke="#1F51FF" stroke-width="7" />
-            <text x="678" y="690" text-anchor="end" class="text">Nanganallur Road</text>
+            <circle cx="349.55" cy="1220.35" r="11" fill="black" />
+            <circle cx="349.55" cy="1220.35" r="7" fill="white" />
+            <!--<text x="686" y="735" text-anchor="end" class="text">Meenambakkam Metro</text>-->
 
-            <circle cx="349.55" cy="720.35" r="11" fill="black" />
-            <circle cx="349.55" cy="720.35" r="7" fill="white" />
-            <text x="686" y="735" text-anchor="end" class="text">Meenambakkam Metro</text>
-
-            <circle cx="310.75" cy="759.15" r="11" fill="black" />
-            <circle cx="310.75" cy="759.15" r="7" fill="white" />
-            <text x="686" y="780" text-anchor="end" class="text">Airport</text>
+            <circle cx="310.75" cy="1259.15" r="11" fill="black" />
+            <circle cx="310.75" cy="1259.15" r="7" fill="white" />
+            <!--<text x="686" y="780" text-anchor="end" class="text">Airport</text>-->
         </g>
 
-        <!-- STATIONS: METRO GREEN -->
+        <!-- INTERCHANGES: METRO GREEN -->
         <g>
+            <circle cx="830" cy="560" r="11" fill="black" />
+            <circle cx="830" cy="560" r="7" fill="white" />
+            <!--<text x="678" y="690" text-anchor="end" class="text">Egmore</text>-->
         </g>
 
-        <!-- STATIONS: SUBURBAN SOUTH-WEST -->
+        <!-- INTERCHANGES: SUBURBAN SOUTH-WEST -->
         <g>
-            <circle cx="494.95" cy="666.15" r="11" fill="black" />
-            <circle cx="494.95" cy="666.15" r="7" fill="white" />
+            <circle cx="880" cy="600" r="11" fill="black" />
+            <circle cx="880" cy="600" r="7" fill="white" />
+            <!--<text x="678" y="690" text-anchor="end" class="text">Chennai Park</text>-->
+            
+            <circle cx="830" cy="600" r="11" fill="black" />
+            <circle cx="830" cy="600" r="7" fill="white" />
+            <!--<text x="678" y="690" text-anchor="end" class="text">Egmore</text>-->
+            
+            <circle cx="494.95" cy="1166.15" r="11" fill="black" />
+            <circle cx="494.95" cy="1166.15" r="7" fill="white" />
             <!--<text x="678" y="690" text-anchor="end" class="text">St Thomas Mount</text>-->
             
-            <line x1="427.25" y1="720.95" x2="438.35" y2="731.55" stroke="#000000" stroke-width="7" />
+            <line x1="427.25" y1="1220.95" x2="438.35" y2="1231.55" stroke="#000000" stroke-width="7" />
             <!--<text x="678" y="690" text-anchor="end" class="text">Pazhavanthangal</text>-->
             
-            <circle cx="399.55" cy="765.45" r="11" fill="black" />
-            <circle cx="399.55" cy="765.45" r="7" fill="white" />
+            <circle cx="399.55" cy="1265.45" r="11" fill="black" />
+            <circle cx="399.55" cy="1265.45" r="7" fill="white" />
             <!--<text x="767" y="660" text-anchor="start" class="text">Meenambakkam</text>-->
             
-            <circle cx="360.75" cy="804.25" r="11" fill="black" />
-            <circle cx="360.75" cy="804.25" r="7" fill="white" />
+            <circle cx="360.75" cy="1304.25" r="11" fill="black" />
+            <circle cx="360.75" cy="1304.25" r="7" fill="white" />
             <!--<text x="767" y="660" text-anchor="start" class="text">Tirusulam</text>-->
+        </g>
+
+        <!-- INTERCHANGES: SUBURBAN NORTH -->
+        <g>
+            <circle cx="880" cy="520" r="11" fill="black" />
+            <circle cx="880" cy="520" r="7" fill="white" />
+            <!--<text x="678" y="690" text-anchor="end" class="text">Moore Market Complex</text>-->
+        </g>
+
+        <!-- INTERCHANGES: MRTS -->
+        <g>
+            <circle cx="960" cy="630" r="11" fill="black" />
+            <circle cx="960" cy="630" r="7" fill="white" />
+            <!--<text x="678" y="690" text-anchor="end" class="text">Moore Market Complex</text>-->
         </g>
     </svg>
 </body>
